@@ -12,7 +12,7 @@ import { Task, TaskDocument } from './schemas/task.schema';
 import { User, UserDocument } from '../users/schemas/user.schema';
 import { TasksService } from './tasks.service';
 import { CreateTaskDto } from './dto/create-task.dto';
-import { AuthGuard } from 'src/common/guards/auth.guard';
+import { AuthGuard } from '../common/guards/auth.guard';
 
 @Controller('tasks')
 export class TasksController {
