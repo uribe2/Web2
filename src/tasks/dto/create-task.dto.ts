@@ -1,4 +1,5 @@
 import { IsBoolean, IsOptional, IsString } from 'class-validator';
+import { Transform } from 'class-transformer';
 
 // DTO para crear task
 export class CreateTaskDto {
