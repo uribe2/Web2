@@ -6,7 +6,7 @@ Mover la creación de tareas a `TasksService` y reorganizar los módulos para re
 
 Sustituir el middleware de autenticación por un `AuthGuard`, que ahora protege la creación de tareas mediante el token `Authorization: admin-secret-token`.
 
-Eliminar modelos innecesarios del controlador y actualicé las dependencias con `class-validator`, `class-transformer` y Mongoose.
+Eliminar modelos innecesarios del controlador y actualizar las dependencias con `class-validator`, `class-transformer` y Mongoose.
 
 Añadir transformaciones al DTO para eliminar espacios innecesarios de `title` y `description`.
 
