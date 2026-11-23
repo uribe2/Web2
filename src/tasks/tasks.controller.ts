@@ -17,8 +17,6 @@ import { AuthGuard } from 'src/common/guards/auth.guard';
 @Controller('tasks')
 export class TasksController {
   constructor(
-    @InjectModel(Task.name) private readonly taskModel: Model<TaskDocument>,
-    @InjectModel(User.name) private readonly userModel: Model<UserDocument>,
     private readonly tasksService: TasksService,
   ) {}
 
