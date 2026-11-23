@@ -1,3 +1,18 @@
+# Cambios al Proyecto
+
+Validar globalmente con un pipe y DTO para controlar los datos de creación de tareas. Adaptar el esquema de Mongoose para exigir una estructura y evitar campos no definidos.
+
+Mover la creación de tareas a `TasksService` y reorganizar los módulos para reutilizar `UsersService` desde el módulo de usuarios.
+
+Sustituir el middleware de autenticación por un `AuthGuard`, que ahora protege la creación de tareas mediante el token `Authorization: admin-secret-token`.
+
+Eliminar modelos innecesarios del controlador y actualicé las dependencias con `class-validator`, `class-transformer` y Mongoose.
+
+Añadir transformaciones al DTO para eliminar espacios innecesarios de `title` y `description`.
+
+Básicamente
+
+---
 # Proyecto Base — Parcial Práctico Backend (NestJS + MongoDB)
 
 API REST en NestJS y Mongoose para la gestión de **Usuarios (`/users`)** y **Tareas (`/tasks`)**.
