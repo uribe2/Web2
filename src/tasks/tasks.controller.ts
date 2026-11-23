@@ -11,6 +11,7 @@ import { Model } from 'mongoose';
 import { Task, TaskDocument } from './schemas/task.schema';
 import { User, UserDocument } from '../users/schemas/user.schema';
 import { TasksService } from './tasks.service';
+import { CreateTaskDto } from './dto/create-task.dto';
 
 @Controller('tasks')
 export class TasksController {
@@ -20,16 +21,9 @@ export class TasksController {
     private readonly tasksService: TasksService,
   ) {}
 
-  @Post()
-  async create(@Body() payload: any) {
-    const user = await this.userModel.findById(payload.userId);
-    if (!user) {
-      throw new NotFoundException(
-        `Usuario con ID ${payload.userId} no encontrado`,
-      );
-    }
-
-    return this.taskModel.create(payload);
+  @Post() // Delegar la lógica al servicio
+  async create(@Body() body: CreateTaskDto) {
+    return this.tasksService.create(body);
   }
 
   @Get()
